@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  resource :products
+  resources :products
 
 end
