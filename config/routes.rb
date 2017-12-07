@@ -5,6 +5,18 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
+  end
+
+  namespace :account do
+    resources :orders
   end
 
 <<<<<<< HEAD
@@ -19,10 +31,20 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       delete :clean
+        post :checkout
     end
   end
 
+  resources :orders do
+     member do
+       post :pay_with_alipay
+       post :pay_with_wechat
+       post :apply_to_cancel
+     end
+   end
+
   resources :cart_items
 >>>>>>> story4
+
 
 end
