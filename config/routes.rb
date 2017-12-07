@@ -19,9 +19,7 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-<<<<<<< HEAD
-  resources :products
-=======
+
   resources :products do
     member do
       post :add_to_cart
@@ -44,7 +42,7 @@ Rails.application.routes.draw do
    end
 
   resources :cart_items
->>>>>>> story4
+
 
 
 end
